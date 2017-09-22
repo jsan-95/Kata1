@@ -26,8 +26,8 @@ public class Person {
     
     public int getAge(){
         Calendar today = GregorianCalendar.getInstance();
-        return (int) (millisecondsToYear(today.getTimeInMillis()) - 
-                      birthday.getTimeInMillis());
+        return (int) (millisecondsToYear(today.getTimeInMillis() - 
+                      birthday.getTimeInMillis()));
     }
 
     private long millisecondsToYear(long timeInMillis) {
