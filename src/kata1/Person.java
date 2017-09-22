@@ -1,15 +1,15 @@
 package kata1;
 
-import java.util.Date;
+import java.util.Calendar;
 
 
 public class Person {
 
     
     private final String name;
-    private final Date birthday;
+    private final Calendar birthday;
     
-    public Person(String name, Date birthday) {
+    public Person(String name, Calendar birthday) {
         this.name = name;
         this.birthday = birthday;
     }
@@ -18,12 +18,12 @@ public class Person {
         return name;
     }
 
-    public Date getBirthday() {
+    public Calendar getBirthday() {
         return birthday;
     }
     
     public int getAge(){
-        return (int) ((new Date().getTime() -
+        return (int) ((new Calendar().getTime() -
                        birthday.getTime())/31536000000L);
     }
     
